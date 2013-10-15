@@ -1,10 +1,7 @@
-# Eclipse IDE
-.settings
-.project
-.buildpath
+# PHPStorm IDE
+.idea
 
 # Symfony2 bundle
 phpunit.xml
 vendor
 composer.lock
-.idea
