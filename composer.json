@@ -1,20 +1,5 @@
 {
-    "name": "bitgandtter/google-bundle",
-    "type": "symfony-bundle",
-    "description": "Integrate Google Services into Symfony 2 app.",
-    "keywords": ["google", "user", "contacts"],
-    "homepage": "http://bitgandtter.github.com",
-    "license": "MIT",
-    "authors": [
-        {
-            "name":"Yasmany Cubela Medina",
-            "email":"yasmanycm@gmail.com"
-        },
-        {
-            "name":"David Guillot",
-            "email":"david.guillot@gmail.com"
-        }
-    ],
+    "name": "mstaples/google-bundle",
     "require": {
         "php": ">=5.3.2",
         "symfony/framework-bundle": ">=2.1",
@@ -26,7 +11,7 @@
         "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
-        "psr-0": { "BIT\\GoogleBundle": "" }
+        "psr-0": { "ONN\\GoogleBundle": "" }
     },
-    "target-dir": "BIT/GoogleBundle"
+    "target-dir": "ONN/GoogleBundle"
 }
