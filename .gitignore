@@ -1,0 +1,9 @@
+# Eclipse IDE
+.settings
+.project
+.buildpath
+
+# Symfony2 bundle
+phpunit.xml
+vendor
+composer.lock

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+	<services>
+		<service id="bit_google.auth"
+			class="BIT\GoogleBundle\Security\Authentication\Provider\GoogleProvider"
+			public="false">
+			<argument /> <!-- Provider-shared Key -->
+			<argument type="service" id="bit_google.api" />
+		</service>
+
+		<service id="bit_google.logout_handler" class="BIT\GoogleBundle\Security\Logout\GoogleHandler"
+			public="false">
+			<argument type="service" id="bit_google.api" />
+		</service>
+
+		<service id="bit_google.security.authentication.listener"
+			class="BIT\GoogleBundle\Security\Firewall\GoogleListener" parent="security.authentication.listener.abstract"
+			abstract="true">
+		</service>
+
+		<service id="bit_google.security.authentication.entry_point"
+			class="BIT\GoogleBundle\Security\EntryPoint\GoogleAuthenticationEntryPoint"
+			public="false" abstract="true">
+			<argument type="service" id="bit_google.api" />
+		</service>
+	</services>
+</container>
